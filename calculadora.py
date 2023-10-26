@@ -8,7 +8,7 @@ root.title("calculadora")
 root.iconbitmap("robot.ico")
 
 #deifine o visor
-visor = Entry(root, width=15, borderwidth=3, font=("System", 20), justify="right", state="readonly")
+visor = Entry(root, width=10, borderwidth=3, font=("System", 20), justify="right", state="readonly")
 #posiciona o visor
 visor.grid(row=0, column=0, columnspan=3)
 
@@ -21,16 +21,16 @@ def click_numero(numero):
     visor.configure(state="readonly")
 
 #definir os botões numéricos
-btn_1 = Button(root, text="1", padx=20, pady=20, command=lambda : click_numero(1), font=("System", 20))
-btn_2 = Button(root, text="2", padx=20, pady=20, command=lambda : click_numero(2), font=("System", 20))
-btn_3 = Button(root, text="3", padx=20, pady=20, command=lambda : click_numero(3), font=("System", 20))
-btn_4 = Button(root, text="4", padx=20, pady=20, command=lambda : click_numero(4), font=("System", 20))
-btn_5 = Button(root, text="5", padx=20, pady=20, command=lambda : click_numero(5), font=("System", 20))
-btn_6 = Button(root, text="6", padx=20, pady=20, command=lambda : click_numero(6), font=("System", 20))
-btn_7 = Button(root, text="7", padx=20, pady=20, command=lambda : click_numero(7), font=("System", 20))
-btn_8 = Button(root, text="8", padx=20, pady=20, command=lambda : click_numero(8), font=("System", 20))
-btn_9 = Button(root, text="9", padx=20, pady=20, command=lambda : click_numero(9), font=("System", 20))
-btn_0 = Button(root, text="0", padx=20, pady=20, command=lambda : click_numero(0), font=("System", 20))
+btn_1 = Button(root, text="1", padx=10, pady=10, command=lambda : click_numero(1), font=("System", 20))
+btn_2 = Button(root, text="2", padx=10, pady=10, command=lambda : click_numero(2), font=("System", 20))
+btn_3 = Button(root, text="3", padx=10, pady=10, command=lambda : click_numero(3), font=("System", 20))
+btn_4 = Button(root, text="4", padx=10, pady=10, command=lambda : click_numero(4), font=("System", 20))
+btn_5 = Button(root, text="5", padx=10, pady=10, command=lambda : click_numero(5), font=("System", 20))
+btn_6 = Button(root, text="6", padx=10, pady=10, command=lambda : click_numero(6), font=("System", 20))
+btn_7 = Button(root, text="7", padx=10, pady=10, command=lambda : click_numero(7), font=("System", 20))
+btn_8 = Button(root, text="8", padx=10, pady=10, command=lambda : click_numero(8), font=("System", 20))
+btn_9 = Button(root, text="9", padx=10, pady=10, command=lambda : click_numero(9), font=("System", 20))
+btn_0 = Button(root, text="0", padx=10, pady=10, command=lambda : click_numero(0), font=("System", 20))
 
 #posicionar os botoes
 btn_1.grid(row=3, column=0)
@@ -75,8 +75,8 @@ def click_equal():
     visor.configure(state="readonly")
 
 #definir botoes de igual e clear
-btn_equal = Button(root, text="=", padx=20, pady=20, command=click_equal, font=("System", 20))
-btn_clear = Button(root, text="C", padx=20, pady=20, command=click_limpar, font=("System", 20))
+btn_equal = Button(root, text="=", padx=10, pady=10, command=click_equal, font=("System", 20))
+btn_clear = Button(root, text="C", padx=10, pady=10, command=click_limpar, font=("System", 20))
 
 #posicionar botoes de igual e limpar
 btn_equal.grid(row=4, column=1)
@@ -131,10 +131,10 @@ def click_div():
     visor.configure(state="readonly")
 
 #definir os botoes das operações
-btn_add = Button(root, text="+", padx=20, pady=20, command=click_add, font=("System", 20))
-btn_sub = Button(root, text="-", padx=20, pady=20, command=click_sub, font=("System", 20))
-btn_mul = Button(root, text="*", padx=20, pady=20, command=click_mul, font=("System", 20))
-btn_div = Button(root, text="/", padx=20, pady=20, command=click_div, font=("System", 20))
+btn_add = Button(root, text="+", padx=10, pady=10, command=click_add, font=("System", 20))
+btn_sub = Button(root, text="-", padx=10, pady=10, command=click_sub, font=("System", 20))
+btn_mul = Button(root, text="*", padx=10, pady=10, command=click_mul, font=("System", 20))
+btn_div = Button(root, text="/", padx=10, pady=10, command=click_div, font=("System", 20))
 
 #posicionar os botoes
 btn_add.grid(row=5, column=0)
