@@ -3,19 +3,22 @@ root = Tk()
 
 #defina o nome da janela
 root.title("calculadora")
+
 #define um ícone
 root.iconbitmap("robot.ico")
 
 #deifine o visor
-visor = Entry(root, width=27)
+visor = Entry(root, width=10, borderwidth=3, font=("System", 20), justify="right", state="readonly")
 #posiciona o visor
 visor.grid(row=0, column=0, columnspan=3)
 
 #definir a função para os botoes numericos
 def click_numero(numero):
+    visor.configure(state="normal")
     num_visor = visor.get() + str(numero)
     visor.delete(0, END)
     visor.insert(0, num_visor)
+    visor.configure(state="readonly")
 
 #definir os botões numéricos
 btn_1 = Button(root, text="1", padx=20, pady=20, command=lambda : click_numero(1))
@@ -46,12 +49,16 @@ btn_0.grid(row=4, column=0)
 
 #definir botao limpar
 def click_limpar():
+    visor.configure(state="normal")
     visor.delete(0, END)
+    visor.configure(state="readonly")
 
 #definir função igual
 def click_equal():
     second_number = int(visor.get())
+    visor.configure(state="normal")
     visor.delete(0, END)
+    visor.configure(state="readonly")
     ans = 0
     if math == "adição":
         ans = first_number + second_number
@@ -74,34 +81,50 @@ btn_clear.grid(row=4, column=2)
 #defini a função do botão adição
 def click_add():
     global first_number
+    visor.configure(state="normal")
     first_number = int(visor.get())
+    visor.configure(state="readonly")
     global math
     math = "adição"
+    visor.configure(state="normal")
     visor.delete(0, END)
+    visor.configure(state="readonly")
 
 #defini a função do botão subtração
 def click_sub():
     global first_number
+    visor.configure(state="normal")
     first_number = int(visor.get())
+    visor.configure(state="readonly")
     global math
     math = "subtração"
+    visor.configure(state="normal")
     visor.delete(0, END)
+    visor.configure(state="readonly")
 
 #defini a função do botão multiplicação
 def click_mul():
     global first_number
+    visor.configure(state="normal")
     first_number = int(visor.get())
+    visor.configure(state="readonly")
     global math
     math = "multiplicação"
+    visor.configure(state="normal")
     visor.delete(0, END)
+    visor.configure(state="readonly")
 
 #defini a função do botão divisão
 def click_div():
     global first_number
+    visor.configure(state="normal")
     first_number = int(visor.get())
+    visor.configure(state="readonly")
     global math
     math = "divisão"
+    visor.configure(state="normal")
     visor.delete(0, END)
+    visor.configure(state="readonly")
 
 #definir os botoes das operações
 btn_add = Button(root, text="+", padx=20, pady=20, command=click_add)
