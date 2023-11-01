@@ -3,7 +3,8 @@ root = Tk()
 
 #defina o nome da janela
 root.title("calculadora")
-
+meu_texto = Label(root,text="""Criado por:
+Vitor Gabriel Galera""")
 #define um ícone
 root.iconbitmap("robot.ico")
 
@@ -142,4 +143,5 @@ btn_sub.grid(row=5, column=1, sticky=E + W)
 btn_mul.grid(row=5, column=2, sticky=E + W)
 btn_div.grid(row=6, column=0, sticky=E + W)
 
+meu_texto.grid(row=6, column=1, columnspan=2)
 root.mainloop()
